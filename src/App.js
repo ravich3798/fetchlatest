@@ -5,12 +5,13 @@ import { useEffect, useState } from "react";
 function App() {
   const [newName,setnewName]=useState(null)
   const [newEmail,setnewEmail]=useState(null)
-  useEffect(()=>{
-    localStorage.removeItem("name")
+  localStorage.removeItem("name")
     localStorage.removeItem("email")
     localStorage.clear()
     setnewName(null)
     setnewEmail(null)
+  useEffect(()=>{
+    
     fetch();
   },[])
   async function fetch() {
@@ -30,7 +31,6 @@ function App() {
   }
   
     return (
-      
       <div>{newName && newEmail?<div className="App-header">FullName: localStorage.getItem("name")<br/>Email: localStorage.getItem("email")</div>:""}
         <br/>
         <div className="App"><button onClick={fetch}>Refresh</button></div>
