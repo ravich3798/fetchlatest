@@ -6,9 +6,6 @@ function App() {
   const [newName,setnewName]=useState(null)
   const [newEmail,setnewEmail]=useState(null)
   useEffect(()=>{
-    setnewName(null)
-    setnewEmail(null)
-    localStorage.clear()
     fetch();
   },[])
   async function fetch() {
@@ -32,6 +29,7 @@ function App() {
         </div>
         <br/>
         <div className="App"><button onClick={fetch}>Refresh</button></div>
+        {localStorage.clear()}
       </div>
     );
 }
