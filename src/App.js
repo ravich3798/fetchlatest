@@ -20,7 +20,7 @@ function App() {
       localStorage.setItem("name",name);
       localStorage.setItem("email",email);
       setnewName(name)
-      setnewEmail(email)
+      setnewName(null)
     }
   }
   
