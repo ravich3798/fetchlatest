@@ -7,6 +7,8 @@ function App() {
   const [newEmail,setnewEmail]=useState()
   useEffect(()=>{
     fetch();
+    setnewEmail(null)
+    setnewName(null)
   },[])
   async function fetch() {
     const response=await axios.get("https://randomuser.me/api");
