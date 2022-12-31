@@ -25,7 +25,7 @@ function App() {
   }
   
     return (
-      <div><div className="App-header">FullName: newName <br/>Email: newEmail
+      <div><div className="App-header">FullName: {newName} <br/>Email: {newEmail}
         </div>
         <br/>
         <div className="App"><button onClick={fetch}>Refresh</button></div>
