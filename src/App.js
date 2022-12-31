@@ -25,7 +25,7 @@ function App() {
   }
   
     return (
-      <div>{newName && newEmail?<div className="App-header">FullName: newName<br/>Email: localStorage.getItem("email")</div>:""}
+      <div>{newName && newEmail?<div className="App-header">FullName: newName<br/>Email: newEmail</div>:""}
         <br/>
         <div className="App"><button onClick={fetch}>Refresh</button></div>
         {localStorage.clear()}
