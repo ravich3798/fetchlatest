@@ -9,8 +9,7 @@ function App() {
   //   fetch();
   // },[])
   async function fetch() {
-    setnewName(null)
-    setnewEmail(null)
+    
     const response=await axios.get("https://randomuser.me/api");
     if(response){
       const data=response;
@@ -30,7 +29,8 @@ function App() {
       <div>{newName && newEmail?<div className="App-header">FullName: newName<br/>Email: newEmail</div>:""}
         <br/>
         <div className="App"><button onClick={fetch}>Refresh</button></div>
-        {localStorage.clear()}
+        {setnewName(null)}
+        {setnewEmail(null)}
       </div>
     );
 }
