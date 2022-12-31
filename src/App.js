@@ -7,8 +7,6 @@ function App() {
   const [newEmail,setnewEmail]=useState()
   useEffect(()=>{
     fetch();
-    setnewEmail(null)
-    setnewName(null)
   },[])
   async function fetch() {
     const response=await axios.get("https://randomuser.me/api");
@@ -31,6 +29,7 @@ function App() {
         </div>
         <br/>
         <div className="App"><button onClick={fetch}>Refresh</button></div>
+        {localStorage.removeItem("name")}{localStorage.removeItem("email")}
       </div>
     );
 }
