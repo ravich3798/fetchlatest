@@ -20,16 +20,15 @@ function App() {
       localStorage.setItem("name",name);
       localStorage.setItem("email",email);
       setnewName(name)
-      setnewName(null)
+      setnewEmail(email)
     }
   }
   
     return (
-      <div><div className="App-header">FullName: {localStorage.getItem("name")} <br/>Email: {localStorage.getItem("email")}
+      <div>{newName?'<div></div>':''}<div className="App-header">FullName: {localStorage.getItem("name")} <br/>Email: {localStorage.getItem("email")}
         </div>
         <br/>
         <div className="App"><button onClick={fetch}>Refresh</button></div>
-        {localStorage.removeItem("name")}{localStorage.removeItem("email")}
       </div>
     );
 }
