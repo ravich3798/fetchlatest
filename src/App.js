@@ -3,8 +3,8 @@ import './App.css'
 import { useEffect, useState } from "react";
 
 function App() {
-  const [newName,setnewName]=useState()
-  const [newEmail,setnewEmail]=useState()
+  const [newName,setnewName]=useState(null)
+  const [newEmail,setnewEmail]=useState(null)
   useEffect(()=>{
     setnewName(null)
     setnewEmail(null)
