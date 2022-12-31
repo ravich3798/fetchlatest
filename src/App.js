@@ -5,11 +5,10 @@ import { useEffect, useState } from "react";
 function App() {
   const [newName,setnewName]=useState(null)
   const [newEmail,setnewEmail]=useState(null)
-  // useEffect(()=>{
-  //   fetch();
-  // },[])
+  useEffect(()=>{
+    fetch();
+  },[])
   async function fetch() {
-    
     const response=await axios.get("https://randomuser.me/api");
     if(response){
       const data=response;
@@ -26,11 +25,11 @@ function App() {
   }
   
     return (
-      <div>Hello{newName && newEmail?<div className="App-header">FullName: newName<br/>Email: newEmail</div>:""}
+      <div><div className="App-header">FullName: {localStorage.getItem("name")} <br/>Email: {localStorage.getItem("email")}
+        </div>
         <br/>
         <div className="App"><button onClick={fetch}>Refresh</button></div>
-        {setnewName(null)}
-        {setnewEmail(null)}
+        {localStorage.clear()}
       </div>
     );
 }
