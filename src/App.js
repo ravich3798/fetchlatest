@@ -6,6 +6,8 @@ function App() {
   const [newName,setnewName]=useState(null)
   const [newEmail,setnewEmail]=useState(null)
   useEffect(()=>{
+    localStorage.removeItem("name")
+    localStorage.removeItem("email")
     localStorage.clear()
     setnewName(null)
     setnewEmail(null)
