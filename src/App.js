@@ -8,8 +8,7 @@ function App() {
   useEffect(()=>{
     setnewName(null)
     setnewEmail(null)
-    localStorage.removeItem("name")
-    localStorage.removeItem("email")
+    localStorage.clear()
     fetch();
   },[])
   async function fetch() {
