@@ -5,9 +5,9 @@ import { useEffect, useState } from "react";
 function App() {
   const [newName,setnewName]=useState(null)
   const [newEmail,setnewEmail]=useState(null)
-  useEffect(()=>{
-    fetch();
-  },[])
+  // useEffect(()=>{
+  //   fetch();
+  // },[])
   async function fetch() {
     const response=await axios.get("https://randomuser.me/api");
     if(response){
