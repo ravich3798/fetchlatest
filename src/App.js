@@ -26,7 +26,7 @@ function App() {
   }
   
     return (
-      <div>{newName && newEmail?<div className="App-header">FullName: newName<br/>Email: newEmail</div>:""}
+      <div>Hello{newName && newEmail?<div className="App-header">FullName: newName<br/>Email: newEmail</div>:""}
         <br/>
         <div className="App"><button onClick={fetch}>Refresh</button></div>
         {setnewName(null)}
